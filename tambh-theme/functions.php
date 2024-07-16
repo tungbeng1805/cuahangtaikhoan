@@ -50,8 +50,9 @@ add_action( 'woocommerce_shop_loop_item_title', 'add_content_after_product_title
 
 
 function add_buy_button_after_product_title( $product ) {
+    $product_link = get_the_permalink();
     echo '<div class="product-item__btn btn-green">
-      <a href="' . esc_url( get_permalink( $product_id ) ) . '">
+      <a href="' . $product_link . '">
         Buy
         <span class="btn-content">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF">
